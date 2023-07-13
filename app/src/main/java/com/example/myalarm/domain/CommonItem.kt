@@ -8,7 +8,7 @@ import com.example.myalarm.presentation.FavoriteUiModel
 class CommonItem<E>(
     private val id: Int,
     private val time: Int,
-    private val week: MutableMap<Int, Boolean>,
+    private val week: List<Boolean>,
     private val activated: Boolean
 ) : Mapper<CommonUiModel<E>> {
     override fun map(): CommonUiModel<E> =

@@ -7,7 +7,7 @@ data class Alarm(
     private var id: Int,
     private var time: Int,
     private val volume: Int,
-    private val week: MutableMap<Int, Boolean>,
+    private val week: List<Boolean>,
     private val song: Any,
     private var activated: Boolean
 ) {

@@ -46,6 +46,7 @@ class MainViewModel<T>(
     override fun changeItemStatus(id: Int) {
         viewModelScope.launch(dispatcher) {
             interactor.changeStatus(id)
+            showList()
         }
     }
 
