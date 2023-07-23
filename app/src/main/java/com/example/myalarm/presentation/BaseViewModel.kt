@@ -13,7 +13,7 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MainViewModel<T>(
+class BaseViewModel<T>(
     private val interactor: CommonInteractor<T>,
     private val communication: CommonCommunication<T>,
     private val dispatcher: CoroutineDispatcher = Dispatchers.Main
@@ -33,10 +33,6 @@ class MainViewModel<T>(
         viewModelScope.launch(dispatcher) {
             interactor.removeItem(id)
         }
-    }
-
-    override fun addItem() {
-        //TODO
     }
 
     override fun observeList(owner: LifecycleOwner, observer: Observer<List<CommonUiModel<T>>>) {

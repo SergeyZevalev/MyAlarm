@@ -6,9 +6,15 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myalarm.R
+import com.example.myalarm.core.presentation.DayActiveClickListener
 import com.example.myalarm.core.presentation.FavoriteItemClickListener
 
-class CommonDataViewHolder<E>(view: View, private val listener: FavoriteItemClickListener) : RecyclerView.ViewHolder(view) {
+class CommonDataViewHolder<E>(
+    view: View,
+    private val listener: FavoriteItemClickListener,
+    private val changeDayListener: DayActiveClickListener,
+) :
+    RecyclerView.ViewHolder(view) {
 
     private val changeButton = itemView.findViewById<ImageButton>(R.id.alarmActivationButton)
     private val settingsButton = itemView.findViewById<ImageButton>(R.id.alarmItemSettingsButton)
@@ -25,8 +31,8 @@ class CommonDataViewHolder<E>(view: View, private val listener: FavoriteItemClic
         }
         model.show(time, changeButton)
         model.checkedDays(days)
-        days.forEachIndexed{ index, it ->
-            it.setOnClickListener {  }
+        days.forEachIndexed { index, it ->
+            it.setOnClickListener { model.changeDayActive(index, changeDayListener) }
         }
     }
 }

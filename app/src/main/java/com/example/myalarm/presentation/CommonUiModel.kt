@@ -5,6 +5,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import androidx.annotation.DrawableRes
 import com.example.myalarm.R
+import com.example.myalarm.core.presentation.DayActiveClickListener
 import com.example.myalarm.core.presentation.FavoriteItemClickListener
 
 abstract class CommonUiModel<E>(
@@ -31,6 +32,10 @@ abstract class CommonUiModel<E>(
 
     fun change(listener: FavoriteItemClickListener) {
         listener.change(id)
+    }
+
+    fun changeDayActive(index: Int, listener: DayActiveClickListener) {
+        listener.changeDayActive(index, id)
     }
 }
 

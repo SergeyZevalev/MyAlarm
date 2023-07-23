@@ -7,7 +7,7 @@ class BaseDataModelMapper<E> : CommonDataModelMapper<CommonItem<E>> {
     override fun map(
         id: Int,
         time: Int,
-        week: MutableMap<Int, Boolean>,
+        week: List<Boolean>,
         activated: Boolean
     ) = CommonItem<E>(id, time, week, activated)
 

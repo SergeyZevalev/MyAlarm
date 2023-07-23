@@ -8,7 +8,6 @@ interface CommonViewModel<T> {
 
     fun getItemList()
     fun removeItem(id: Int)
-    fun addItem()
     fun changeItemStatus(id: Int)
     fun observeList(owner: LifecycleOwner, observer: Observer<List<CommonUiModel<T>>>)
 }

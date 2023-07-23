@@ -7,4 +7,35 @@
     <string name="friday">Fr</string>
     <string name="saturday">Sa</string>
     <string name="sunday">Su</string>
+    <string name="divide">:</string>
+    <string name="am">AM</string>
+    <string name="pm">PM</string>
+    <string name="_12_hours_format">12 hours format</string>
+    <string name="set_melody">Set melody</string>
+    <string name="melody">Melody</string>
+    <string name="choose_melody">Choose Melody</string>
+    <string name="repeat">Repeat</string>
+    <string name="Repeat">Repeat\n</string>
+    <string name="days">Choose days</string>
+    <string name="vibration">Vibration</string>
+    <string name="text">Text</string>
+    <string name="notification">Notification</string>
+    <string name="add_notification">Add notification</string>
+    <string name="ok_dialog_button">Ok</string>
+    <string name="cancel_dialog_button">Cancel</string>
+    <string name="europe_format_error">Houre time must be between 0 and 11!</string>
+    <string name="usual_format_error">Hour time must be between 0 and 23!</string>
+    <string name="minutes_format_error">Minutes must be between 00 and 59!!</string>
+    <string name="add_notification_dialog">Enter notification text</string>
+
+    <string-array name="sound_resources">
+        <item>System sounds</item>
+        <item>Stored melody</item>
+    </string-array>
+
+    <string-array name="repeat_mode">
+        <item>Weekdays</item>
+        <item>Weekend</item>
+        <item>Custom</item>
+    </string-array>
 </resources>

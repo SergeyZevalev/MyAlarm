@@ -4,33 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".presentation.MainActivity">
+    android:orientation="vertical">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/alarmList"
+    <FrameLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        android:layout_height="match_parent">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    </FrameLayout>
 
-        <Space
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-
-        <ImageButton
-            tools:src="@drawable/ic_add_alarm_item"
-            android:id="@+id/addAlarmButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-
-    </LinearLayout>
 
 </LinearLayout>
